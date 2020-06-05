@@ -1,0 +1,22 @@
+{
+  "name": "logbook",
+  "description": "Studienarbeit Logbook",
+  "main": "server.js",
+  "license": "ISC",
+  "directory": "js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.7",
+    "jquery": "^3.2.1",
+    "openlayers3": "^3.0.0",
+    "leaflet": "^1.2.0",
+    "angular-leaflet-directive": "^0.10.0",
+    "socket.io": "^2.0.4"
+  }
+}

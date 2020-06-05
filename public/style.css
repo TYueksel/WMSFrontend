@@ -1,0 +1,158 @@
+html, body {
+	/*width: 800px;*/
+	/*height: 480px;*/
+	overflow: hidden;
+	/*border: 2px solid #5B948D;*/
+}
+.row, .container, .col {margin: 0; padding: 0;}
+.info { width: 200px; float: left; }
+.mapcontainer { width: 400px; float: left; }
+
+#header {
+	width: 100%;
+	height: 55px;
+	background: #def7f4;
+	box-sizing: padding-box;
+	padding: 5px 10px;
+	float: left;
+	box-shadow: 0px 5px 15px #dcdcdc;
+}
+#header .logo {
+	height: 40px;
+	float: right;
+	margin-right: 20px;
+}
+#header h1 {
+	font-size: 24px;
+	font-weight: lighter;
+	float: left;
+	text-transform: uppercase;
+	margin-left: 20px;
+	line-height: 45px;
+}
+#wrapper {
+	width: 100%;
+	height: 100%;
+	box-sizing: padding-box;
+	float: left;
+}
+#wrapper .btn {
+	background-color: #def7f5;
+	border-color: #def7f5;
+	color: #757676;
+	text-transform: uppercase;
+	border-radius: 10px;
+	cursor: pointer;
+	margin-bottom: 5px;
+	transition-duration: 0.3s;
+}
+#wrapper .btn:disabled {
+	background-color: #ddd;
+}
+#wrapper .btn:hover:enabled {
+  background-color: #03B7A8;
+  color: white;
+}
+#wrapper .btn:active:enabled {
+  background-color: #03B7A8;
+  transform: translateY(4px);
+}
+#wrapper .btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+#wrapper .input {
+	border-bottom: 1px solid #c6c6c6;
+	border-radius: 0;
+	font-weight: lighter;
+}
+#wrapper .input:last-child {
+	border: none;
+}
+#wrapper .input input {
+	/*color: #8b8b8b;*/
+	color: #000;
+	background: 0;
+	border: none;
+	margin: 0;
+	padding: 0 10px;
+	font-weight: lighter;
+}
+#left {
+	width: 45%;
+	float: left;
+	box-sizing: padding-box;
+	padding: 20px;
+}
+#left label {
+	/*color: #b1b1b1;*/
+	color: #000;
+	margin: 0;
+	font-size: 18px;
+	padding: 0 10px;
+	font-weight: lighter;
+}
+#right {
+	width: 45%;
+	float: right;
+	box-sizing: padding-box;
+	padding-top: 20px;
+}
+#right label {
+	/*color: #b1b1b1;*/
+	color: #000;
+	margin: 0;
+	font-size: 18px;
+	font-weight: lighter;
+	padding-bottom: 5px;
+}
+.form-group {
+	margin-bottom: 0px;
+	padding-bottom: 10px;
+}
+
+
+
+#settings .password {
+	margin: 0;
+	padding: 0;
+}
+#settings .password li {
+	float: left;
+	list-style: none;
+	margin-right: 5px;
+	height: 50px;
+	line-height: 50px;
+}
+#settings .password li input {
+	width: 40px;
+	height: 50px;
+	text-align: center;
+	border-radius: 5px;
+	border: 1px solid #999;
+	background: #ccc;
+	font-size: 18px;
+}
+#settings .password li input.active {
+	background: #fff;
+}
+
+
+#settings .digits {
+	padding: 10px 0 0 0;
+}
+#settings .digits li {
+	float: left;
+	list-style: none;
+	margin-right: 5px;
+	cursor: pointer;
+}
+#settings .digits li span {
+	width: 35px;
+	height: 35px;
+	border: 1px solid #999;
+	border-radius: 5px;
+	display: block;
+	text-align: center;
+	line-height: 35px;
+}
