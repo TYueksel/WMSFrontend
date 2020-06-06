@@ -16,11 +16,9 @@
 	/**
 	 * MQTT Zugangsdaten
 	 */
-	global.mqttUSER = '';
-	global.mqttPW = '';
-	global.mqttHOST = '';
-	global.mqttPORT = '';
-	global.VIN = '';
-	global.mqttTOPIC = '';
+	global.mqttUSER = 'tolunay.yueksel@gmail.com';
+	global.mqttPW = '437c0228';
+	global.mqttHOST = 'mqtt://mqtt.dioty.co:1883';
+	global.mqttTOPIC = '/tolunay.yueksel@gmail.com/';
 
 }());

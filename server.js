@@ -28,12 +28,14 @@ console.log("App listening on port 8080");
 
 // MySQL DB
 //var db = require('./db');
-
-require('./html');
+const mqtt = require('./mqtt');
 
 // Communication FrontFrontend & FrontBackend
 global.io = require('socket.io')(server);
-global.io.on('connection', function() {
-    console.log("new User");
-    //global.io.emit("buttonStates", global.pump1);
+
+
+process.on('SIGINT', function() {
+	console.log("Terminating");
+	mqtt.closeMQTT();
+	process.exit();
 });
