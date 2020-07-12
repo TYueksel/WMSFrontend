@@ -33,54 +33,72 @@
 			<div class="form-group form-control-sm input">
 				<label for="">Tank 2</label>
 				<input type="text" class="form-control" ng-model="tank2" disabled>
+				<br>
+				<label for="">Turbidity</label>
+				<input type="text" class="form-control" ng-model="turbidity" disabled>
 			</div>
 			<div class="form-group form-control-sm input">
-				<label for="">User 1</label>
+				<label for="">User 1 Usage</label>
 				<input type="text" class="form-control" ng-model="user1" disabled>
+				<br>
+				<label for="">User 1 Limit</label>
+				<input type="number" min="0" step="0.001" class="form-control" ng-model="userLimit1" ng-change="change1()" ng-disabled="!ready">
+				<br>
+				<button type="button" class="btn btn-primary" ng-click="submit1()">
+				  Submit
+				</button>
 			</div>
 			<div class="form-group form-control-sm input">
-				<label for="">User 2</label>
+				<label for="">User 2 Usage</label>
 				<input type="text" class="form-control" ng-model="user2" disabled>
+				<br>
+				<label for="">User 2 Limit</label>
+				<input type="number" min="0" step="0.001" class="form-control" ng-model="userLimit2" ng-change="change2()" ng-disabled="!ready">
+				<br>
+				<button type="button" class="btn btn-primary" ng-click="submit2()">
+				  Submit
+				</button>
 			</div>
 		</div><!-- #left -->
 		<div id="right">
 			<div class="form-group form-control-sm input">
 				<label for="">Pump 1</label>
 				<br>
-				<button id="pump1ON" type="button" class="btn btn-primary" ng-click="enablePump1()" ng-disabled="pump1">
+				<button type="button" class="btn btn-primary" ng-click="enablePump1()" ng-disabled="pump1">
 				  On
 				</button>
-				<button id="pump1OFF" type="button" class="btn btn-primary" ng-click="disablePump1()" ng-disabled="!pump1"=>
-				  Off
-				</button>
-				<br>
-				<label for="">Pump 2</label>
-				<br>
-				<button type="button" class="btn btn-primary" ng-click="enablePump2()" ng-disabled="started">
-				  On
-				</button>
-				<button type="button" class="btn btn-primary" ng-click="disablePump2()" ng-disabled="!started">
+				<button type="button" class="btn btn-primary" ng-click="disablePump1()" ng-disabled="!pump1">
 				  Off
 				</button>
 				<br>
 				<label for="">Valve 1</label>
 				<br>
-				<button type="button" class="btn btn-primary" ng-click="enableValve1()" ng-disabled="started">
+				<button type="button" class="btn btn-primary" ng-click="enableValve1()" ng-disabled="valve1">
 				  On
 				</button>
-				<button type="button" class="btn btn-primary" ng-click="disableValve1()" ng-disabled="!started">
+				<button type="button" class="btn btn-primary" ng-click="disableValve1()" ng-disabled="!valve1">
 				  Off
 				</button>
 				<br>
 				<label for="">Valve 2</label>
 				<br>
-				<button type="button" class="btn btn-primary" ng-click="enableValve2()" ng-disabled="started">
+				<button type="button" class="btn btn-primary" ng-click="enableValve2()" ng-disabled="valve2">
 				  On
 				</button>
-				<button type="button" class="btn btn-primary" ng-click="disableValve2()" ng-disabled="!started">
+				<button type="button" class="btn btn-primary" ng-click="disableValve2()" ng-disabled="!valve2">
 				  Off
 				</button>
 				<br>
+			</div>
+			<div class="form-group form-control-sm input">
+				<br>
+				<br>
+				<br>
+				<label for="">System Reset</label>
+				<br>
+				<button type="button" class="btn btn-primary" ng-click="reset()">
+				  Reset
+				</button>
 			</div>
 		</div><!-- #right -->
 	</div>

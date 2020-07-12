@@ -15,7 +15,7 @@
 		console.log(err);
 	});
 	
-	schedule.scheduleJob('0 0 * * *', function(){
+	schedule.scheduleJob('0 0 0 * * *', function(){
 		filename = "logs/" + getFilename();
 		
 		const newStream = fs.createWriteStream(filename, {flags:'as'});

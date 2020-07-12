@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="WMSFrontend">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Water Management System</title>
+
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="socket.io.js"></script>
+	<script src="appUser2.js"></script>
+	<script src="factory.js"></script>
+</head>
+<body ng-controller="mainController">
+
+	<div id="header">
+		<h1>Water Management System</h1>
+		</a><img src="img/water.png" class="logo" />
+	</div>
+
+	<div id="wrapper">
+		<div id="left">
+			<h2>User 2</h2>
+			<div class="form-group form-control-sm input">
+				<label for="">Used</label>
+				<input type="text" class="form-control" ng-model="usage" disabled>
+			</div>
+			<div class="form-group form-control-sm input">
+				<label for="">Remaining</label>
+				<input type="text" class="form-control" ng-model="remaining" disabled>
+			</div>
+			<div class="form-group form-control-sm input">
+				<label for="">Valve</label>
+				<br>
+				<button type="button" class="btn btn-primary" ng-click="enableValve()" ng-disabled="valve">
+				  On
+				</button>
+				<button type="button" class="btn btn-primary" ng-click="disableValve()" ng-disabled="!valve">
+				  Off
+				</button>
+			</div>
+		</div><!-- #left -->
+		<div id="right">
+		
+		</div><!-- #right -->
+	</div>
+
+</body>
+</html>

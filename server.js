@@ -1,5 +1,7 @@
 // config file
-require('./config.js');
+require('./config');
+// Init logger
+global.logger = require('./logger');
 // Back-End web framework
 var express  = require('express');
 // Filesystem: https://nodejs.org/api/path.html
@@ -22,20 +24,25 @@ app.use(express.static(path.join(__dirname, './public')));
 // Routes benutzen
 app.use('/', routes);
 
-// Start server
-var server = app.listen(8080);
-console.log("App listening on port 8080");
+var mqtt;
 
 // MySQL DB
-//var db = require('./db');
-const mqtt = require('./mqtt');
-
-// Communication FrontFrontend & FrontBackend
-global.io = require('socket.io')(server);
-
+const db = require('./db');
+db.getData(function(res) {
+	// Start server
+	var server = app.listen(8080);
+	global.logger.log("App listening on port 8080");
+	
+	mqtt = require('./mqtt');
+	
+	// Communication FrontFrontend & FrontBackend
+	global.io = require('socket.io')(server);
+});
 
 process.on('SIGINT', function() {
-	console.log("Terminating");
+	global.logger.log("Terminating...");
+	db.endConnection();
 	mqtt.closeMQTT();
+	global.logger.close();
 	process.exit();
 });

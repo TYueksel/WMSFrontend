@@ -1,0 +1,7 @@
+
+2020-07-10T14:37:19.935Z:	Starting Frontend...
+2020-07-10T14:37:22.183Z:	Connected to database
+2020-07-10T14:37:22.270Z:	App listening on port 8080
+2020-07-10T14:37:22.588Z:	Connected to MQTT Broker
+2020-07-10T14:37:45.066Z:	User 1 Limit: 0
+2020-07-10T17:53:12.132Z:	Terminating...
